@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="perros.css">
+</head>
+<body>
+<header>
+    <h1>Perros</h1>
+</header>
+
+<section class="introduccion">
+    <h2>INTRODUCCIÓN</h2>
+    <label>El perro (Canis familiaris), llamado perro doméstico o can, es un mamífero carnívoro de la familia de los cánidos, que constituye una especie del género Canis. En el 2013, la población mundial estimada de perros estaba entre setecientos millones y novecientos ochenta y siete millones.
+        <br>Junto al gato doméstico, es uno de los animales de compañía más populares del mundo, recibiendo el título de «el mejor amigo del hombre».
+        <br>El perro doméstico proviene de un grupo ancestral común que data de hace aproximadamente treinta mil años, y desde entonces se ha extendido a todas partes del mundo. Los primeros restos fósiles de perros enterrados junto con seres humanos se encontraron en el Valle del Jordán, y datan de hace unos doce mil años. <br>Desde entonces, los perros y los humanos han evolucionado conjuntamente, tanto en las culturas africanas y euroasiáticas, como en las que poblaron América y se mantuvieron sin contacto con aquellas hasta el siglo XV. Los perros comparten el entorno, los hábitos y el estilo de vida humanos, como las dietas ricas en cereales y almidón.</label><br>
+    <br>
+    <br>A continuación, tenemos un vídeo que nos explica brevemente su historia:
+    <br>
+    <br>
+    <!--<video src="https://www.youtube.com/watch?v=fvFbr8SJ42k" controls></video>-->
+    <iframe class="video" width="500" height="300" src="https://www.youtube.com/embed/fvFbr8SJ42k" allowfullscreen></iframe>
+</section>
+<br>
+
+<section class="cuestionario">
+    <h2>EDITAR RAZAS EN API</h2>
+    <a href="http://localhost:8080/api/razas">PINCHA AQUÍ PARA ACCEDER AL LINK DE LA API</a>
+
+    <!-- POST -->
+    <form id="form-post">
+        <h3>Agregar nueva raza (POST)</h3>
+
+        <label>Introduce el nombre de la raza:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Introduce el tamaño de la raza (Grande, Mediano, Pequeño):</label><br>
+        <input type="text" name="tamaño" required><br><br>
+
+        <label>Introduce la altura de la raza (cm):</label><br>
+        <input type="number" name="altura" required><br><br>
+
+        <label>Introduce el peso de la raza (kg):</label><br>
+        <input type="number" name="peso" required><br><br>
+
+        <button type="button" onclick="añadirRaza()">Añadir Raza</button>
+    </form>
+
+    <hr>
+
+    <!-- PUT -->
+    <form id="form-put">
+        <h3>Modificar raza existente (PUT)</h3>
+
+        <label>Introduce el nombre de la raza a modificar:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Nuevo tamaño de la raza (Grande, Mediano, Pequeño):</label><br>
+        <input type="text" name="tamaño" required><br><br>
+
+        <label>Nueva altura de la raza (cm):</label><br>
+        <input type="number" name="altura" required><br><br>
+
+        <label>Nuevo peso de la raza (kg):</label><br>
+        <input type="number" name="peso" required><br><br>
+
+        <button type="button" onclick="modificarRaza()">Modificar Raza</button>
+    </form>
+
+    <hr>
+
+    <!-- DELETE -->
+    <form id="form-delete">
+        <h3>Eliminar raza (DELETE)</h3>
+
+        <label>Introduce el nombre de la raza a eliminar:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <button type="button" onclick="eliminarRaza()">Eliminar Raza</button>
+    </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,1 +1,9 @@
-# p4
+# p4 - API DE RAZAS DE PERROS
+
+| Método | Ruta                                                      | Cuerpo                                      | Descripción                                         | Posibles Respuestas                              |
+|--------|-----------------------------------------------------------|---------------------------------------------|----------------------------------------------------|--------------------------------------------------|
+| GET    | /api/razas/{nombre}                                        | Ninguno                                     | Obtiene una raza por su nombre                      | 200 OK (La raza se encuentra), 404 Not Found (La raza no existe)                           |
+| GET    | /api/razas                                                | Ninguno                                     | Obtiene todas las razas                            | 200 OK (Se devuelven las razas), 404 Not Found (No hay razas disponibles)                           |
+| POST   | /api/razas                                                | `{ "nombre": "X", "tamaño": "Y", "altura": Z, "peso": W }` | Crea una nueva raza                                  | 201 Created (La raza se crea correctamente), 409 Conflict (Error, la raza ya existe)                       |
+| PUT    | /api/razas/{nombre}/tamaño/{tamaño}/altura/{altura}/peso/{peso} | Ninguno                                     | Modifica los atributos de una raza existente       | 200 OK (La raza se actualiza correctamente), 404 Not Found  (La raza no existe)                          |
+| DELETE | /api/razas/{nombre}                                        | Ninguno                                     | Elimina una raza por su nombre                     | 204 No Content (La raza se elimina correctamente), 404 Not Found (La raza no existe)                    |
